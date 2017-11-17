@@ -20,18 +20,22 @@ public class CalculadoraApp extends UnicastRemoteObject implements CalculadoraIn
     }
     
     public int soma(int a, int b) throws RemoteException {
+        System.out.println("Somando: "+ (a + b));
         return a + b;
     }
 
     public int sub(int a, int b) throws RemoteException {
+         System.out.println("Subtraindo: "+ (a - b));
         return a - b;
     }
 
     public int multi(int a, int b) throws RemoteException {
+         System.out.println("Multiplicando: "+ (a * b));
         return a * b;
     }
 
     public double div(int a, int b) throws RemoteException {
+         System.out.println("Dividindo: "+ (a / b));
         return a / b;
     }
 
