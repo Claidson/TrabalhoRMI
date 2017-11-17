@@ -17,7 +17,7 @@ public class CalcClient {
 
     public static void main(String[] args) {
         try {
-            Registry reg = LocateRegistry.getRegistry("127.0.0.1", 1099);
+            Registry reg = LocateRegistry.getRegistry("127.0.0.1", 50000);
             CalculadoraInterface calc = (CalculadoraInterface) reg.lookup("calculadora");
             System.out.println("1 + 1: " + calc.soma(1, 1));
             System.out.println("1 - 1: " + calc.sub(1, 1));
@@ -25,6 +25,7 @@ public class CalcClient {
             System.out.println("1 / 1: " + calc.div(1, 1));
 
         } catch (Exception ex) {
+            System.out.println("Erro no cliente: " +ex);
         }
     }
 }
