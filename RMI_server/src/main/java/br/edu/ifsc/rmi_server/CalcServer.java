@@ -17,6 +17,7 @@ public class CalcServer {
 
     public static void main(String[] args) {
         try {
+            System.setProperty("java.rmi.server.hostname", "10.151.34.132");
             Registry reg = LocateRegistry.createRegistry(50000);
             CalculadoraApp calc = new CalculadoraApp();
             reg.rebind("calculadora", calc);
